@@ -96,8 +96,8 @@ function PreviousPokemon({onSelect}) {
 
 function PokemonSection({onSelect, pokemonName}) {
   return (
-    <div style={{display: 'flex'}}>
-      <PokemonCacheProvider>
+    <PokemonCacheProvider>
+      <div style={{display: 'flex'}}>
         <PreviousPokemon onSelect={onSelect} />
 
         <div className="pokemon-info" style={{marginLeft: 10}}>
@@ -108,8 +108,8 @@ function PokemonSection({onSelect, pokemonName}) {
             <PokemonInfo pokemonName={pokemonName} />
           </PokemonErrorBoundary>
         </div>
-      </PokemonCacheProvider>
-    </div>
+      </div>
+    </PokemonCacheProvider>
   )
 }
 
